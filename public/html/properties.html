@@ -1,0 +1,40 @@
+<h1 class="text-center">Properties List!</h1>
+
+<button class="btn btn-primary btn-lg" ui-sref='newProperty'>New Property</button>
+
+<h3>Properties</h3>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th style='display: none'>Id</th>
+      <th>Address (or apartment number)</th>
+      <th>Occupation status</th>
+      <th>Rent price</th>
+      <th>Utilities cost</th>
+      <th>Other pertinent information.</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat='property in properties track by $index'>
+      <td style='display: none'>{{ property._id }}</td>
+      <td>{{ property.address }}</td>
+      <td>{{ property.occupationstatus }}</td>
+      <td>{{ property.rentprice }}</td>
+      <td>{{ property.utilitiescost }}</td>
+      <td>{{ property.otherinfo }}</td>
+      <td><i ng-click='editProperty(property)' class='glyphicon glyphicon-edit'></i></td>
+      <td><i ng-click='deleteProperty(property)' class='glyphicon glyphicon-remove-circle'></i></td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tfoot>
+</table>
