@@ -1,11 +1,27 @@
 "use strict";
 
+var Clients = React.createClass({
+
+   render () {
+     return (
+
+       <form>
+				<h1>Manage Author</h1>
+  			 <input type="text" defaultValue="Hello!" />
+				 <input type="text" defaultValue="Hello!" />
+
+				<input type="submit" value="Save" className="btn btn-default" onClick={this.props.onSave} />
+			</form>
+     );
+   }
+})
+
 var Welcome = React.createClass({
   render: function(){
     return (
       <div>
-        <h1>Demo timez</h1>
-        <p>Let count stuff</p>
+      <h1>Demo timez</h1>
+      <p>Let count stuff</p>
       </div>
     )
   }
@@ -22,10 +38,10 @@ var Counter = React.createClass({
 
     return (
       <div>
-        <button onClick={ () => addCount(id) }>+</button>
-        <button onClick={ () => minusCount(id) }>-</button>
-        <button onClick={ () => deleteCounter(id) }>Delete Me</button>
-        <h3>Counter {id}: {count}</h3>
+      <button onClick={ () => addCount(id) }>+</button>
+      <button onClick={ () => minusCount(id) }>-</button>
+      <button onClick={ () => deleteCounter(id) }>Delete Me</button>
+      <h3>Counter {id}: {count}</h3>
       </div>
     )
   }
@@ -102,11 +118,13 @@ var Root = React.createClass({
 
     return (
       <div>
-        <Welcome />
+      <Welcome />
 
-        <button onClick={this.addCounter}>Add Counter</button>
+      <Clients />
 
-        {counters}
+      <button onClick={this.addCounter}>Add Counter</button>
+
+      {counters}
 
       </div>
     )
