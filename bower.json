@@ -1,5 +1,5 @@
 {
-  "name": "flashcardapp",
+  "name": "reactpropertymanager2",
   "description": "",
   "main": "index.js",
   "authors": [
@@ -17,7 +17,8 @@
   "dependencies": {
     "angular": "^1.5.5",
     "angular-ui-router": "^0.2.18",
-    "bootstrap": "^3.3.6"
+    "bootstrap": "^3.3.6",
+    "react": "^15.1.0"
   },
   "resolutions": {
     "angular": "1.5.5"
