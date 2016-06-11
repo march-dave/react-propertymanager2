@@ -6,15 +6,9 @@ var Propertymgr = require('../models/propertymgr.js')
 
 router.route('/')
 .get((req, res) => {
-  // Client.find({}, (err, clients) => {
-  //   res.status(err ? 400 : 200).send(err || clients);
-  // });
   Client.find({})
     .populate('propertyref')
     .exec( (err, clients) => {
-
-      console.log('client', clients);
-
       res.status(err ? 400 : 200).send(err || clients);
     });
 })
@@ -27,9 +21,6 @@ router.route('/')
 
 router.route('/:id')
 .get((req, res) => {
-  // Client.findById(req.params.id, (err, client) => {
-  //   res.status(err ? 400 : 200).send(err || client);
-  // });
   Client.findById({ _id: req.params.id })
         .populate('propertyref')
         .exec( (err, client) => {

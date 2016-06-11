@@ -5,12 +5,11 @@ var Clients = React.createClass({
    render () {
      return (
 
-       <form>
+      <form>
 				<h1>Manage Author</h1>
-  			 <input type="text" defaultValue="Hello!" />
-				 <input type="text" defaultValue="Hello!" />
-
-				<input type="submit" value="Save" className="btn btn-default" onClick={this.props.onSave} />
+  			 <input type="text" name="firstName" />
+				 <input type="text" name="lastName" />
+				 <input type="submit" value="Save" className="btn btn-default" onClick={this.props.onSave} />
 			</form>
      );
    }
@@ -118,12 +117,11 @@ var Root = React.createClass({
 
     return (
       <div>
-      <Welcome />
 
       <Clients />
 
       <button onClick={this.addCounter}>Add Counter</button>
-
+      <Welcome />
       {counters}
 
       </div>
